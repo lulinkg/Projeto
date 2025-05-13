@@ -1,0 +1,108 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: azure;
+    background-color: rgb(85, 88, 122);
+
+}
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* espaço entre grid e lista */
+    margin-top: 30px;
+    flex-wrap: wrap; /* em telas menores, quebra para baixo */
+  }
+
+/* Centraliza o bloco da word-list na tela */
+.word-list {
+    background-color: #4d3f3f;
+    padding: 20px 30px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+  }
+  
+  /* Centraliza o título "Palavras" */
+  .word-list h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Lista sem marcadores e centralizada */
+  #lista-palavras {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha as palavras à direita */
+  }
+  
+  /* Label com alinhamento da palavra à direita */
+  #lista-palavras label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Palavras na direita, checkbox na esquerda */
+    margin: 8px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Checkbox */
+  #lista-palavras input[type="checkbox"] {
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: green;
+    cursor: pointer;
+  }
+  
+
+  .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .found {
+    background-color: rgb(6, 185, 6);
+  }
+  
+  
+#grid{
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+    gap: 2px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cell.selected{
+    background-color: rgb(53, 51, 51);
+}
